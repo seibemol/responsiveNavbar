@@ -1,0 +1,56 @@
+.navbar {
+    background-color: steelblue;
+    height: 80px;
+    padding: 10px;
+}
+
+.navbar-nav {
+    justify-content: center !important;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 24px;
+    transition: 0.3s color;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    text-decoration: none !important;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: black;
+    font-weight: 600;
+}
+
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: rgb(43, 82, 114);
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before, .nav-link.active::before {
+        width: 90%;
+        visibility: visible;
+    }
+}
